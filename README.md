@@ -1,6 +1,6 @@
 ![Image](https://img.shields.io/npm/v/djs-reply?color=)
-![Image](https://img.shields.io/npm/dt/djs-reply.svg?color=E2142D&maxAge=3600) 
-
+![Image](https://img.shields.io/npm/dt/djs-reply.svg?color=E2142D&maxAge=3600)
+ 
 #
 
 # Yüklemek İçin
@@ -57,7 +57,7 @@ message.lineReplyNoMention(embed); // --> Sadece Mesajı Satır İçine Alır.
 
 if (message.content === '!ping') {
 let msg = await message.lineReply('Ping');
-let ping = (m.createdTimestamp - message.createdTimestamp);
+let ping = (msg.createdTimestamp - message.createdTimestamp);
 msg.edit(`${ping}ms`)
 };
 
