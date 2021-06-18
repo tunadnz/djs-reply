@@ -13,7 +13,7 @@ npm i djs-reply
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> [NOT] Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
+const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
 
 //------------------------------------------------------------\\
 ```
@@ -25,7 +25,7 @@ const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> [NOT] Ek 
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> [NOT] Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
+const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
 
 client.on('ready', () => {
 console.log(`${client.user.tag} Olarak Giriş Yaptım!`);
