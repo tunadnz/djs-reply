@@ -1,7 +1,6 @@
 ![Image](https://img.shields.io/npm/v/djs-reply?color=)
 ![Image](https://img.shields.io/npm/dt/djs-reply.svg?color=E2142D&maxAge=3600) 
-#
-![Image](https://cdn.glitch.com/36cacdd9-ec87-4187-829d-b9b82de904c3%2Fchaindev-db.png?v=1614557240999)
+
 #
 # Yüklemek İçin
 ```npm
