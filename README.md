@@ -1,6 +1,6 @@
-![Image](https://img.shields.io/npm/v/djs-reply?color=)
-![Image](https://img.shields.io/npm/dt/djs-reply.svg?color=E2142D&maxAge=3600)
- 
+![Image](https://img.shields.io/npm/v/djs-reply?color=5865F2)
+![Image](https://img.shields.io/npm/dt/djs-reply.svg?color=5865F2&maxAge=3600)
+
 #
 
 # Yüklemek İçin
