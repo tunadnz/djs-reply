@@ -14,28 +14,24 @@ npm i djs-reply
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
+const { lineReply, lineReplyNoMention } = require('djs-reply');
+// --> Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Tanımlamanız Yeterli Olacaktır.
 
 //------------------------------------------------------------\\
 ```
 
 # Örnek Method Kullanımı
 ```javascript
-
 //-----------------------Örnek-----------------------\\
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { lineReply, lineReplyNoMention } = require('djs-reply'); // --> Ek Bir İşlem Yapmanıza Gerek Yok Ana Dosyanıza Bunu Koymanız Yeterli Olacaktır.
-
-client.on('ready', () => {
-console.log(`${client.user.tag} Olarak Giriş Yaptım!`);
-});
+const { lineReply, lineReplyNoMention } = require('djs-reply');
 
 client.on('message', (message) => {
-if (message.content === '!reply') {
+if (message.content === '!lineReply') {
 const embed = new Discord.MessageEmbed()
-.setDescription(`Wow! Line Reply Message!`);
+.setDescription(`Vay Canına! Bu Bir Satır İçine Alınmış Mesaj!`);
 message.lineReply(embed); // --> Kullanıcıyı Etiketleyerek Mesajı Satır İçine Alır.
 message.lineReplyNoMention(embed); // --> Sadece Mesajı Satır İçine Alır.
 };
@@ -44,24 +40,26 @@ message.lineReplyNoMention(embed); // --> Sadece Mesajı Satır İçine Alır.
 
 client.login('TOKEN');
 
-//-----------------------Embed-----------------------\\
+//-----------------------Manual Reply Örnek-----------------------\\
 
-if (message.content === '!reply') {
-const embed = new Discord.MessageEmbed()
-.setDescription(`Wow! Line Reply Message!`);
-message.lineReply(embed); // --> Kullanıcıyı Etiketleyerek Mesajı Satır İçine Alır.
-message.lineReplyNoMention(embed); // --> Sadece Mesajı Satır İçine Alır.
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const { manualReply, manualReplyNoMention } = require('djs-reply');
+
+client.on('message', (message) => {
+if (message.content === '!manualReply') {
+manualReply(message, 'Vay Canına! Bu Bir Manuel Satır İçine Alınmış Mesaj!'); 
+// --> Kullanıcıyı Etiketleyerek Mesajı Satır İçine Alır.
+
+manualReplyNoMention(message, 'Vay Canına! Bu Bir Manuel Satır İçine Alınmış Mesaj!'); 
+// --> Sadece Mesajı Satır İçine Alır.
 };
-
-//-----------------------Edit [Async Function]-----------------------\\
-
-if (message.content === '!ping') {
-let msg = await message.lineReply('Ping');
-let ping = (msg.createdTimestamp - message.createdTimestamp);
-msg.edit(`${ping}ms`)
 };
+});
 
-//--------------------------------------------------\\
+client.login('TOKEN');
+
+//---------------------------------------------------\\
 ```
 
 # İletişim Bilgilerim
